@@ -58,6 +58,7 @@ modules:
       - -DSYSTEM_FFTW=ON
       - -DSYSTEM_FMT=ON
       - -DSYSTEM_RTMIDI=ON
+      - -DSYSTEM_FREETYPE=ON
     cleanup:
       - /share/icons/hicolor/*@*
       - /share/icons/hicolor/1024x1024
