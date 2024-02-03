@@ -71,5 +71,3 @@ modules:
           url: https://api.github.com/repos/tildearrow/furnace/releases/latest
           version-query: .tag_name | sub("^v"; "")
           tag-query: .tag_name
-      - type: patch
-        path: appstream_lint.patch
