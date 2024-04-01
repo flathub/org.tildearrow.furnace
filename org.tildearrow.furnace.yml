@@ -16,7 +16,7 @@ finish-args:
   - --filesystem=xdg-run/pipewire-0
 
 modules:
-  - 'shared-modules/SDL2/SDL2-with-libdecor.json'
+  - shared-modules/SDL2/SDL2-with-libdecor.json
 
   - name: fmt
     buildsystem: cmake-ninja
@@ -65,8 +65,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/tildearrow/furnace.git
-        tag: v0.6.1
-        commit: 2957645d9d1bb1928bed007e79baa7d88dcf213b
+        tag: v0.6.2
+        commit: 19ed900ef36c25c5b8c0c1db53cdc45bfc9ff87c
         x-checker-data:
           type: json
           url: https://api.github.com/repos/tildearrow/furnace/releases/latest
