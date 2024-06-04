@@ -14,6 +14,7 @@ finish-args:
   - --device=dri
   - --socket=pulseaudio
   - --filesystem=xdg-run/pipewire-0
+  - --env=SDL_VIDEO_WAYLAND_WMCLASS=org.tildearrow.furnace
 
 modules:
   - shared-modules/SDL2/SDL2-with-libdecor.json
