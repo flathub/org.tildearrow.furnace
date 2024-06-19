@@ -14,7 +14,6 @@ finish-args:
   - --device=dri
   - --socket=pulseaudio
   - --filesystem=xdg-run/pipewire-0
-  - --env=SDL_VIDEO_WAYLAND_WMCLASS=org.tildearrow.furnace
 
 modules:
   - shared-modules/SDL2/SDL2-with-libdecor.json
@@ -67,8 +66,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/tildearrow/furnace.git
-        tag: v0.6.3
-        commit: f28dcec68331e01ea7fce870d6cdb8eca4bf7a86
+        tag: v0.6.4
+        commit: 3570424eb62ee48c7ce91324d67d7861fd974175
         x-checker-data:
           type: json
           url: https://api.github.com/repos/tildearrow/furnace/releases/latest
