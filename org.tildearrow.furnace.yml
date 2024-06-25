@@ -66,12 +66,10 @@ modules:
     sources:
       - type: git
         url: https://github.com/tildearrow/furnace.git
-        tag: v0.6.4
-        commit: 3570424eb62ee48c7ce91324d67d7861fd974175
+        tag: v0.6.5
+        commit: b04a2e38db5497a84af79ebf14ab473113fd7f51
         x-checker-data:
           type: json
           url: https://api.github.com/repos/tildearrow/furnace/releases/latest
           version-query: .tag_name | sub("^v"; "")
           tag-query: .tag_name
-      - type: patch
-        path: locale_064.patch
