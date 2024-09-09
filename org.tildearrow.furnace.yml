@@ -1,6 +1,6 @@
 app-id: org.tildearrow.furnace
 runtime: org.freedesktop.Platform
-runtime-version: '23.08'
+runtime-version: '24.08'
 sdk: org.freedesktop.Sdk
 command: furnace
 rename-desktop-file: furnace.desktop
@@ -16,21 +16,11 @@ finish-args:
   - --filesystem=xdg-run/pipewire-0
 
 modules:
-  - shared-modules/SDL2/SDL2-with-libdecor.json
-
   - name: fmt
-    buildsystem: cmake-ninja
-    config-opts:
-      - -DFMT_TEST=OFF
-    cleanup: ['*']
-    sources:
-      - type: archive
-        url: https://github.com/fmtlib/fmt/archive/11.0.2.tar.gz
-        sha256: 6cb1e6d37bdcb756dbbe59be438790db409cdb4868c66e888d5df9f13f7c027f
-        x-checker-data:
-          type: anitya
-          project-id: 11526
-          url-template: https://github.com/fmtlib/fmt/archive/$version.tar.gz
+    buildsystem: simple
+    build-commands:
+      - mkdir ${FLATPAK_DEST}/lib
+      - ARCH_TRIPLE=$(gcc --print-multiarch) && cp /usr/lib/${ARCH_TRIPLE}/libfmt.so* ${FLATPAK_DEST}/lib
 
   - name: rtmidi
     buildsystem: cmake-ninja
