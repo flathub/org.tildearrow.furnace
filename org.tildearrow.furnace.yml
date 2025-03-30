@@ -44,6 +44,7 @@ modules:
       - -DSYSTEM_RTMIDI=ON
       - -DSYSTEM_FREETYPE=ON
       - -DSHOW_OPEN_ASSETS_MENU_ENTRY=ON
+      - -DFLATPAK_WORKAROUNDS=ON
     cleanup:
       - /share/icons/hicolor/*@*
       - /share/icons/hicolor/1024x1024
