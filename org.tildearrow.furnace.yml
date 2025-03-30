@@ -16,12 +16,6 @@ finish-args:
   - --filesystem=xdg-run/pipewire-0
 
 modules:
-  - name: fmt
-    buildsystem: simple
-    build-commands:
-      - mkdir ${FLATPAK_DEST}/lib
-      - ARCH_TRIPLE=$(gcc --print-multiarch) && cp /usr/lib/${ARCH_TRIPLE}/libfmt.so* ${FLATPAK_DEST}/lib
-
   - name: rtmidi
     buildsystem: cmake-ninja
     cleanup:
