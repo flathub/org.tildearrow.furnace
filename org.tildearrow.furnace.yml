@@ -52,8 +52,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/tildearrow/furnace.git
-        tag: v0.6.8.1
-        commit: 7b62655712af603456193e75a64c33cd9ff75907
+        tag: v0.6.8.3
+        commit: f2619dbd988c92bf9c7173648d191648f60aecbf
         x-checker-data:
           type: json
           url: https://api.github.com/repos/tildearrow/furnace/releases/latest
