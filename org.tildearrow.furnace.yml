@@ -48,6 +48,7 @@ modules:
       - -DFLATPAK_WORKAROUNDS=ON
       - -DWITH_DEMOS=ON
     cleanup:
+      - /share/doc
       - /share/icons/hicolor/*@*
       - /share/icons/hicolor/1024x1024
     sources:
