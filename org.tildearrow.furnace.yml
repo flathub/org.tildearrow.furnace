@@ -21,7 +21,7 @@ modules:
     buildsystem: cmake-ninja
     cleanup:
       - /include
-      - /share
+      - /share/rtmidi
       - /lib/pkgconfig
     config-opts:
       - -DRTMIDI_BUILD_TESTING=OFF
