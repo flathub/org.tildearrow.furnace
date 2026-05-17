@@ -1,6 +1,6 @@
 app-id: org.tildearrow.furnace
 runtime: org.freedesktop.Platform
-runtime-version: '24.08'
+runtime-version: '26.08'
 sdk: org.freedesktop.Sdk
 command: furnace
 rename-desktop-file: furnace.desktop
@@ -19,12 +19,12 @@ finish-args:
 modules:
   - name: rtmidi
     buildsystem: cmake-ninja
-    cleanup:
-      - /include
-      - /share
-      - /lib/pkgconfig
     config-opts:
       - -DRTMIDI_BUILD_TESTING=OFF
+    cleanup:
+      - /include
+      - /share/rtmidi
+      - /lib/pkgconfig
     sources:
       - type: archive
         url: https://github.com/thestk/rtmidi/archive/refs/tags/6.0.0.tar.gz
